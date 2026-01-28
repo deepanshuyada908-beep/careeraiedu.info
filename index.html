@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CareerAI Buddy v2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">CareerAI v2</div>
+    <nav class="nav">
+      <button id="nav-home" class="nav-btn">Home</button>
+      <button id="nav-test" class="nav-btn">Start Test</button>
+      <button id="nav-catalog" class="nav-btn">Catalog</button>
+      <button id="nav-saved" class="nav-btn">Saved</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- HOME -->
+    <section id="page-home" class="card">
+      <h1>CareerAI Buddy — Better & Specific</h1>
+      <p class="muted">12 targeted questions that separate similar careers. Top 3 tailored suggestions, with steps, exams, colleges and mini-quiz.</p>
+      <div class="center">
+        <button id="start-btn" class="primary large">Start Career Test</button>
+      </div>
+      <p class="muted small">Make sure `style.css` and `app.js` are in the same folder as this file.</p>
+    </section>
+
+    <!-- TEST -->
+    <section id="page-test" class="card hidden">
+      <h2>Career Test — 12 questions</h2>
+      <div id="question-area"></div>
+
+      <div class="controls">
+        <button id="prev-btn" class="ghost">Previous</button>
+        <button id="next-btn" class="primary">Next</button>
+      </div>
+
+      <div class="progress-row">
+        <div id="progress-text" class="small">0 / 12</div>
+        <div class="progress"><div id="progress-bar"></div></div>
+      </div>
+
+      <div id="answers-review" class="hidden">
+        <h3>Your Answers</h3>
+        <div id="answers-list" class="small"></div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="page-results" class="card hidden">
+      <h2>Your Top 3 Career Matches</h2>
+      <div id="results-list"></div>
+      <div class="actions">
+        <button id="save-result" class="ghost">Save Result</button>
+        <button id="retake" class="ghost">Retake Test</button>
+      </div>
+    </section>
+
+    <!-- CAREER DETAILS -->
+    <section id="page-career" class="card hidden">
+      <div class="row-between">
+        <div>
+          <h2 id="career-title">Career</h2>
+          <div id="career-sub" class="small muted">Details & path</div>
+        </div>
+        <div>
+          <button id="back-results" class="ghost">Back</button>
+          <button id="start-quiz" class="primary">Take Mini Quiz</button>
+        </div>
+      </div>
+
+      <div class="detail">
+        <p id="career-desc" class="muted"></p>
+
+        <strong>How to become this in India (steps):</strong>
+        <ul id="career-path" class="small"></ul>
+
+        <strong>Eligibility & Exams:</strong>
+        <ul id="career-exams" class="small"></ul>
+
+        <strong>Top colleges / institutes:</strong>
+        <ul id="career-colleges" class="small"></ul>
+
+        <strong>Estimated salary:</strong>
+        <div id="career-salary" class="small"></div>
+
+        <strong>Future demand (short):</strong>
+        <div id="career-demand" class="small"></div>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="page-quiz" class="card hidden">
+      <h2 id="quiz-title">Mini Quiz</h2>
+      <div id="quiz-area"></div>
+      <div class="actions">
+        <button id="quiz-back" class="ghost">Back</button>
+        <button id="quiz-submit" class="primary">Submit Quiz</button>
+      </div>
+      <div id="quiz-result" class="small"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer small center">Designed for students • Clear, specific results</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
